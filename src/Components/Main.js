@@ -5,7 +5,7 @@ import PrevTask from './PrevTask'
 import SearchTask from './SearchTask'
 import ToDoList from './ToDoList'
 
-const TodoList = [{id:1,notes:"this is for test",name:"testing",category:"Work",startTime:"2023-11-22T14:30:00",endTime:"2023-22-T15:30:00 PM",priority:2}]
+const TodoList = [{id:1,notes:"this is for test",name:"testing",category:"Work",startTime:"2023-11-23T14:09:00",endTime:"2023-11-25T15:30:00",priority:2}]
 /* The Priority level is out of 3 (like ?/3) */
 
 export default class Main extends Component {
