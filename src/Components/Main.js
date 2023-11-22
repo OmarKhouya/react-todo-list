@@ -13,7 +13,7 @@ export default class Main extends Component {
         return (
             <div className='container'>
                 <div className='d-flex justify-content-evenly flex-wrap'>
-                    <div className='border border-dark rounded p-3 m-3 ' style={{maxWidth: "30rem"}}>
+                    <div className='border border-dark rounded p-3 m-3 w-100' style={{maxWidth: "30rem"}}>
                         <ToDoList toDoList={TodoList} />
                     </div>
                     <div className='d-flex flex-column ' >

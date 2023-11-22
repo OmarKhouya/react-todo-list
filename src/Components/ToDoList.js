@@ -7,7 +7,7 @@ export default function ToDoList ({toDoList}) {
             <p className="text-center fw-bold">To Do</p>
             <ul className="list-unstyled">
                 {toDoList && (
-                    toDoList.map(task=><ToDoTask task={task} key={task.id}/>)
+                    toDoList.map(task=><ToDoTask task={task} key={task.id} type="List"/>)
                 )}
             </ul>
         </>
