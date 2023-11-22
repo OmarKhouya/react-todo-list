@@ -1,9 +1,12 @@
+import ToDoTask from "./ToDoTask";
 
-export default function ToDoList () {
+export default function ToDoList ({toDoList}) {
 
     return(
-        <div>
-            To do list 
-        </div>
+        <ul className="list-unstyled">
+            {toDoList && (
+                toDoList.map(task=><ToDoTask task={task} />)
+            )}
+        </ul>
     )
 }
