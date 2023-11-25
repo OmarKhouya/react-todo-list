@@ -7,7 +7,7 @@ export default function ToDoTask({task,type,show}) {
     const [endTimeFormatted,setEndTimeFormatted] = useState(new Date(endTime));
     const [TodayDate,setTodayDate] = useState(new Date())
     const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const [StartDay,setStartDay] = useState(startTimeFormatted.getDate() === TodayDate.getDate() ? "Today" : dayNames[startTimeFormatted.getDay()])
+    const [StartDay,setStartDay] = useState(startTimeFormatted.getDate() === TodayDate.getDate() ? "Today" : `${dayNames[startTimeFormatted.getDay()]} ${startTimeFormatted.toLocaleDateString()}`)
     const [StartTime,setStartTime] = useState(`${startTimeFormatted.getHours()}:${(startTimeFormatted.getMinutes() < 10 ? '0' : '') + startTimeFormatted.getMinutes()}`)
     const [EndDay,setEndDay] = useState(endTimeFormatted.getDate() === startTimeFormatted.getDate() ? "" : `${dayNames[endTimeFormatted.getDay()]} at`)
     const [EndTime,setEndTime] = useState(`${endTimeFormatted.getHours()}:${(endTimeFormatted.getMinutes() < 10 ? '0' : '') + endTimeFormatted.getMinutes()}`)

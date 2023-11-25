@@ -6,8 +6,51 @@ import SearchTask from './SearchTask'
 import ToDoList from './ToDoList'
 
 const TodoList = [
-    {id:1,notes:"this is for test",name:"testing",category:"Work",startTime:"2023-11-23T14:09:00",endTime:"2023-11-25T15:30:00",priority:2},
-    {id:2,notes:"this is for Second test",name:"Prepare Dinner",category:"Home",startTime:"2023-11-22T20:09:00",endTime:"2023-11-22T20:30:00",priority:3},
+    {
+        id:1,
+        notes:"Work on your to do list project",
+        name:"Continue Project",
+        category:"Work",
+        startTime:"2023-11-24T15:00:00",
+        endTime:"2023-11-24T17:00:00",
+        priority:3
+    },
+    {
+        id:2,
+        notes:"Watch some youtube videos",
+        name:"Watch Youtube",
+        category:"Home",
+        startTime:"2023-11-24T13:00:00",
+        endTime:"2023-11-24T14:30:00",
+        priority:1
+    },
+    {
+        id:3,
+        notes:"Go prepare your dinner",
+        name:"Prepare Dinner",
+        category:"Home",
+        startTime:"2023-11-23T20:00:00",
+        endTime:"2023-11-22T21:00:00",
+        priority:3,
+    },
+    {
+        id:4,
+        notes:"Go take a shower",
+        name:"Shower",
+        category:"home",
+        startTime:"2023-11-24T17:00:00",
+        endTime:"2023-11-24T17:30:00",
+        priority:2
+    },
+    {
+        id:5,
+        notes:"go to school",
+        name:"go to school",
+        category:"School",
+        startTime:"2023-11-22T08:13:00",
+        endTime:"2023-11-22T13:30:00",
+        priority:3,
+    },
 ]
 /* The Priority level is out of 3 (like ?/3) */
 

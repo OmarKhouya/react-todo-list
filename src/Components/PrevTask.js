@@ -1,19 +1,50 @@
 
 import ToDoTask from "./ToDoTask"
 
-export default function PrevTask({toDoList}) {
-    const sortedToDoList = toDoList.sort((a,b)=> new Date(a.startTime) - new Date(b.startTime))
+const timetest = [
+    {time: "2023-11-24T00:09:00"},
+    {time: "2023-11-23T23:30:00"},
+    {time: "2023-11-23T22:14:00"},
+    {time: "2023-11-25T15:09:00"},
+    {time: "2023-11-30T15:09:00"},
+]
 
-    const calculTimeDiff = (end,actual) =>{
-        const diff = end - actual;
-        console.log(diff)
+/* const newtime = timetest.reduce((a,b)=>{
+    const timeDiffA = new Date() - new Date(a.time)
+    const timeDiffB = new Date() - new Date(b.time)
+    console.log(a,b)
+    console.log(timeDiffA)
+    console.log(timeDiffB)
+    if (timeDiffA >= 0 || timeDiffB >=0){
+        if (timeDiffA > timeDiffB){
+            return a
+        }
     }
+    return b
+})
+console.log(newtime) */
+console.log()
+console.log()
+export default function PrevTask({toDoList}) {
+    const task = toDoList.reduce((closest,current)=>{
+        console.log(current,closest)
+        if(new Date() - new Date(current.endTime) >= 0){
+            const timeDiffClosest = new Date() - new Date(closest.endTime)
+            const timeDiffCurrent = new Date() - new Date(current.endTime)
+            if (timeDiffClosest > timeDiffCurrent){
+                return closest
+            }
+            return current
+        }
+        return closest
+    },toDoList[0])
 
+    
     return (
         <>
             <p className="text-center fw-bold">Previous Task</p>
             <ul className="list-unstyled">
-                {sortedToDoList.slice(0,1).map(task=><ToDoTask task={task} type="Prev" show="show" key={task.id}/>)}
+                {<ToDoTask task={task} type="Prev" show="show" key={task.id}/>}
             </ul>
         </>
     )
